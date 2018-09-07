@@ -42,5 +42,8 @@ module.exports = {
   &.start {
     background-color:orange;
   }
+  &.exercise {
+    background-color:green;
+  }
 }
 </style>
