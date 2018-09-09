@@ -12,6 +12,9 @@ import Exercise3 from '@/components/firstPart/exercise3'
 import Exercise4 from '@/components/firstPart/exercise4'
 import SecondPart from '@/components/secondPart/list'
 import Conditionals from '@/components/secondPart/conditionals'
+import Exercise5 from '@/components/secondPart/exercise5'
+import MonsterGame from '@/components/secondPart/monsterGame'
+import MonsterGameOfficial from '@/components/secondPart/monsterGameOfficial'
 
 Vue.use(Router)
 
@@ -65,7 +68,18 @@ export default new Router({
     {
       path: '/secondPart/conditionals',
       component: Conditionals
+    },
+    {
+      path: '/secondPart/exercise5',
+      component: Exercise5
+    },
+    {
+      path: '/secondPart/monsterGame',
+      component: MonsterGame
+    },
+    {
+      path: '/secondPart/MonsterGameOfficial',
+      component: MonsterGameOfficial
     }
-
   ]
 })
