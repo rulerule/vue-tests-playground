@@ -1,6 +1,6 @@
 <template>
   <div class="second-part">
-    <h1> Part 2 </h1>
+    <h1> Part 2 - Conditionals </h1>
     <button class="button-navigation" @click="conditionals()"> Conditionals And Loops </button>
     <button class="button-navigation exercise" @click="exercise(5)"> Exercise 5 </button>
     <button class="button-navigation exercise" @click="monsterGame()"> Monster Game by Myself </button>

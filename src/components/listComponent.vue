@@ -1,8 +1,9 @@
 <template>
   <div class="base-course">
     <h1> List Of Lectures </h1>
-    <button class="button-navigation" @click="part1()"> Part 1 </button>
-    <button class="button-navigation" @click="part2()"> Part 2 </button>
+    <button class="button-navigation" @click="part1()"> Basic Dom Manipulation </button>
+    <button class="button-navigation" @click="part2()"> Conditionals </button>
+    <button class="button-navigation" @click="part3()"> Understanding Vue Instance </button>
   </div>
 </template>
 
@@ -17,6 +18,9 @@ module.exports = {
     },
     part2 () {
       this.$router.push('secondPart/')
+    },
+    part3 () {
+      this.$router.push('thirdPart/')
     }
   }
 }
@@ -26,6 +30,18 @@ module.exports = {
   float:left;
   width:100%;
   margin-top:20px;
+}
+.button-container-list {
+  width:120px;
+  height:120px;
+  margin-right:20px;
+  float:left;
+  p {
+    width:100%;
+    text-align:center;
+    float:left;
+    color:blue;
+  }
 }
 .button-navigation {
   float:left;

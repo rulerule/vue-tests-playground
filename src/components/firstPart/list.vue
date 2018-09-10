@@ -1,6 +1,6 @@
 <template>
   <div class="first-part">
-    <h1> Part 1 </h1>
+    <h1> Part 1 - Basic Dom Manipulation </h1>
     <button class="button-navigation" v-on:click="basicComponent()"> Basic Component with strings </button>
     <button class="button-navigation" v-on:click="eventsIntro()"> Start Events </button>
     <button class="button-navigation" v-on:click="twoWayDatabind()"> Two way databind </button>

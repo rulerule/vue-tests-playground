@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import ListComponent from '@/components/listComponent'
+// First Part - Basic Dom Manipulation
 import FirstPart from '@/components/firstPart/list'
 import BasicComponent from '@/components/firstPart/basicComponent'
 import EventsComponent from '@/components/firstPart/eventsComponent'
@@ -10,11 +11,15 @@ import Exercise1 from '@/components/firstPart/exercise1'
 import Exercise2 from '@/components/firstPart/exercise2'
 import Exercise3 from '@/components/firstPart/exercise3'
 import Exercise4 from '@/components/firstPart/exercise4'
+// Second Part - Conditionals
 import SecondPart from '@/components/secondPart/list'
 import Conditionals from '@/components/secondPart/conditionals'
 import Exercise5 from '@/components/secondPart/exercise5'
 import MonsterGame from '@/components/secondPart/monsterGame'
 import MonsterGameOfficial from '@/components/secondPart/monsterGameOfficial'
+// Third Part - Understanding Vue Instance
+import ThirdPart from '@/components/thirdPart/list'
+import VueInstance from '@/components/thirdPart/vueInstance'
 
 Vue.use(Router)
 
@@ -80,6 +85,14 @@ export default new Router({
     {
       path: '/secondPart/MonsterGameOfficial',
       component: MonsterGameOfficial
+    },
+    {
+      path: '/thirdPart',
+      component: ThirdPart
+    },
+    {
+      path: '/thirdPart/VueInstance',
+      component: VueInstance
     }
   ]
 })
