@@ -32,11 +32,11 @@
               <button id="give-up" @click="giveUp">GIVE UP</button>
           </div>
       </section>
-      <section class="row log">
+      <section class="row log" v-if="turns.length > 0">
           <div class="small-12 columns">
               <ul>
-                  <li>
-
+                  <li v-for="turn in turns" :key="turn" :class="{'player-turn': turn.isPlayer, 'monster-turn': !turn.isPlayer}">
+                    {{turn.text}}
                   </li>
               </ul>
           </div>
@@ -63,6 +63,7 @@ export default {
       this.gameIsRunning = true
       this.playerHealth = 100
       this.monsterHealth = 100
+      this.turns = []
     },
     attack () {
       let damage = this.calculateDamage(3, 10)
@@ -75,7 +76,12 @@ export default {
       this.monsterAttacks()
     },
     specialAttack () {
-      this.monsterHealth -= this.calculateDamage(10, 20)
+      let damage = this.calculateDamage(10, 20)
+      this.monsterHealth -= damage
+      this.turns.unshift({
+        isPlayer: true,
+        text: `Player hits Monster hard for ${damage}`
+      })
       if (this.checkWin()) return
       this.monsterAttacks()
     },
@@ -85,6 +91,10 @@ export default {
       } else {
         this.playerHealth = 100
       }
+      this.turns.unshift({
+        isPlayer: true,
+        text: `Player heals himself for 10`
+      })
       this.monsterAttacks()
     },
     giveUp () {
