@@ -8,20 +8,22 @@
       <span v-on:mousemove.stop="">DEAD SPOT</span>
     </p>
     <input type="text" v-on:keyup.enter="alertMe">
-    <div class="button-container">
-      <button class="button-navigation" @click="backToList()"> Back to List </button>
-    </div>
+    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-module.exports = {
+import GoBack from '../general/goBackComponent.vue'
+export default {
   data () {
     return {
       counter: 0,
       x: 0,
       y: 0
     }
+  },
+  components: {
+    GoBack
   },
   methods: {
     increase: function (amount, event) {
@@ -33,9 +35,6 @@ module.exports = {
     },
     alertMe: function () {
       alert('Alert')
-    },
-    backToList () {
-      this.$router.go(-1)
     }
   }
 }

@@ -13,11 +13,12 @@
             <div>reset time has been set to: {{ timer }} ms </div>
             <p>{{ value }}</p>
         </div>
-        <button class="button-navigation" @click="backToList()"> Back To List </button>
+        <GoBack></GoBack>
     </div>
 </template>
 
 <script>
+import GoBack from '../general/goBackComponent.vue'
 export default {
   name: 'Exercise3',
   data () {
@@ -25,6 +26,9 @@ export default {
       value: 0,
       timer: 0
     }
+  },
+  components: {
+    GoBack
   },
   computed: {
     result: function () {
@@ -44,11 +48,6 @@ export default {
     },
     timer: function (value) {
       if (this.timer.length === 0) this.timer = 0
-    }
-  },
-  methods: {
-    backToList: function () {
-      this.$router.go(-1)
     }
   }
 }

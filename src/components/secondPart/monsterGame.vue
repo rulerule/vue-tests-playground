@@ -24,13 +24,12 @@
         <div class="details" v-for="action in actions" :key="action">{{action.text}}</div>
       </div>
     </div>
-    <div class="button-container">
-      <button class="button-navigation" @click="backToList()"> Back To List </button>
-    </div>
+    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
+import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -41,6 +40,9 @@ export default {
       gameStarted: false,
       actions: []
     }
+  },
+  components: {
+    GoBack
   },
   methods: {
     atack () {
@@ -79,9 +81,6 @@ export default {
         action.text = `${action.atacker} heals himself for ${action.heal}`
       }
       this.actions.push(action)
-    },
-    backToList () {
-      this.$router.go(-1)
     },
     generateRandomInt (min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min

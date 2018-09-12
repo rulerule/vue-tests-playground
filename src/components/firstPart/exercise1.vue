@@ -14,11 +14,12 @@
         <div>
             <input v-bind:value="name" type="text">
         </div>
-        <button class="button-navigation" @click="backToList()"> Back To List </button>
+        <GoBack></GoBack>
     </div>
 </template>
 
 <script>
+import GoBack from '../general/goBackComponent.vue'
 export default {
   name: 'Exercise1',
   data () {
@@ -28,15 +29,15 @@ export default {
       imgToDisplay: 'https://i.imgur.com/zygpOzL.gif'
     }
   },
+  components: {
+    GoBack
+  },
   methods: {
     multiplyAge: function () {
       return this.age * 3
     },
     randomNumber: function () {
       return Math.random(0, 1)
-    },
-    backToList: function () {
-      this.$router.go(-1)
     }
   }
 }

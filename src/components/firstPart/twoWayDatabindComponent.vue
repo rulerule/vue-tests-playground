@@ -7,20 +7,22 @@
     <button @click="secondCounter++">Increase Second Counter</button>
     <p> Counter: {{ counter }} | {{ secondCounter}} </p>
     <p> Result: {{ result() }} | {{ output }} </p>
-    <div class="button-container">
-      <button class="button-navigation" @click="backToList()"> Back to List </button>
-    </div>
+    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-module.exports = {
+import GoBack from '../general/goBackComponent.vue'
+export default {
   data () {
     return {
       name: 'max',
       counter: 0,
       secondCounter: 0
     }
+  },
+  components: {
+    GoBack
   },
   computed: { // ONLY WORK FOR SYNC TASKS
     output () {
@@ -47,9 +49,6 @@ module.exports = {
     result () {
       console.log('normal')
       return this.counter > 5 ? 'Greater 5' : 'Smaller than 5'
-    },
-    backToList () {
-      this.$router.go(-1)
     }
   }
 }

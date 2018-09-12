@@ -3,14 +3,13 @@
     <h1> {{firstWord}} </h1>
     <p v-html="finishedLink"></p>
     <div class="first"> {{firstWord}} {{getSecondWord()}} - <a v-bind:href="hrefElement">google</a></div>
-    <div class="button-container">
-      <button class="button-navigation" @click="backToList()"> Back to List </button>
-    </div>
+    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-module.exports = {
+import GoBack from '../general/goBackComponent.vue'
+export default {
   data () {
     return {
       firstWord: 'hello',
@@ -22,10 +21,10 @@ module.exports = {
   methods: {
     getSecondWord () {
       return this.firstWord
-    },
-    backToList () {
-      this.$router.go(-1)
     }
+  },
+  components: {
+    GoBack
   }
 }
 </script>

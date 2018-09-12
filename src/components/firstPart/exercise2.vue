@@ -14,11 +14,12 @@
             <input v-on:keydown.enter="storeValue" type="text">
             <p> {{ value }}</p>
         </div>
-        <button class="button-navigation" @click="backToList()"> Back To List </button>
+        <GoBack></GoBack>
     </div>
 </template>
 
 <script>
+import GoBack from '../general/goBackComponent.vue'
 export default {
   name: 'Exercise2',
   data () {
@@ -27,15 +28,15 @@ export default {
       textToAlert: 'badjorasDiModem'
     }
   },
+  components: {
+    GoBack
+  },
   methods: {
     alertMe: function (text) {
       alert(text)
     },
     storeValue: function (event) {
       this.value = event.target.value
-    },
-    backToList: function () {
-      this.$router.go(-1)
     }
   }
 }

@@ -31,11 +31,12 @@
             <div :style="{width:progressWidth + 'px'}" :class="{progress: progressActive}"></div>
         </div>
       </div>
-      <button class="button-navigation" @click="backToList()"> Back To List </button>
+    <GoBack></GoBack>
     </div>
 </template>
 
 <script>
+import GoBack from '../general/goBackComponent.vue'
 export default {
   name: 'Exercise4',
   data () {
@@ -51,6 +52,9 @@ export default {
       progressActive: false,
       progressWidth: 0
     }
+  },
+  components: {
+    GoBack
   },
   methods: {
     startEffect: function () {
@@ -88,9 +92,6 @@ export default {
         this.progressWidth += 1
         this.startProgress()
       }.bind(this), 100)
-    },
-    backToList: function () {
-      this.$router.go(-1)
     }
   }
 }

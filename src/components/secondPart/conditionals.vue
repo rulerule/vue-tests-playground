@@ -34,14 +34,13 @@
       <h1> Keep track of information when using v-for </h1>
       <button @click="ingredients.push('spices')">Add New</button>
     </div>
-    <div class="button-container">
-      <button class="button-navigation" @click="backToList()"> Back to List </button>
-    </div>
+    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-module.exports = {
+import GoBack from '../general/goBackComponent.vue'
+export default {
   data () {
     return {
       show: true,
@@ -53,10 +52,8 @@ module.exports = {
       ]
     }
   },
-  methods: {
-    backToList () {
-      this.$router.go(-1)
-    }
+  components: {
+    GoBack
   }
 }
 </script>

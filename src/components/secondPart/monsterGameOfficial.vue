@@ -42,13 +42,12 @@
           </div>
       </section>
     </div>
-    <div class="button-container">
-      <button class="button-navigation" @click="backToList()"> Back To List </button>
-    </div>
+    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
+import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -57,6 +56,9 @@ export default {
       gameIsRunning: false,
       turns: []
     }
+  },
+  components: {
+    GoBack
   },
   methods: {
     startGame () {
@@ -129,9 +131,6 @@ export default {
         return true
       }
       return false
-    },
-    backToList () {
-      this.$router.go(-1)
     }
   }
 }

@@ -16,14 +16,13 @@
     <input type="text" v-model="color2">
     <input type="text" v-model="width">
     <hr>
-    <div class="button-container">
-      <button class="button-navigation" @click="backToList()"> Back to List </button>
-    </div>
+    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-module.exports = {
+import GoBack from '../general/goBackComponent.vue'
+export default {
   data () {
     return {
       attachRed: false,
@@ -32,10 +31,8 @@ module.exports = {
       width: 100
     }
   },
-  methods: {
-    backToList () {
-      this.$router.go(-1)
-    }
+  components: {
+    GoBack
   },
   computed: {
     divClasses () {

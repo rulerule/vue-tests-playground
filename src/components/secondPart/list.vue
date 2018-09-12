@@ -34,5 +34,6 @@ module.exports = {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import 'src/styles/scss/buttons.scss';
 </style>

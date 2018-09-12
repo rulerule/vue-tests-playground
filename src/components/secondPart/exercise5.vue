@@ -25,11 +25,12 @@
         <div v-else> {{ element }} </div>
       </li>
     </ul>
-    <button class="button-navigation" @click="backToList()"> Back To List </button>
+    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
+import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -47,12 +48,12 @@ export default {
       }
     }
   },
+  components: {
+    GoBack
+  },
   methods: {
     checkArray (element) {
       return Array.isArray(element)
-    },
-    backToList () {
-      this.$router.go(-1)
     }
   }
 }
