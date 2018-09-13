@@ -4,6 +4,7 @@
     <button class="button-navigation" @click="part1()"> Basic Dom Manipulation </button>
     <button class="button-navigation" @click="part2()"> Conditionals </button>
     <button class="button-navigation" @click="part3()"> Understanding Vue Instance </button>
+    <button class="button-navigation" @click="part4()"> Components Introduction </button>
   </div>
 </template>
 
@@ -21,6 +22,9 @@ module.exports = {
     },
     part3 () {
       this.$router.push('thirdPart/')
+    },
+    part4 () {
+      this.$router.push('fourthPart/')
     }
   }
 }

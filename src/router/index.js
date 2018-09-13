@@ -20,6 +20,9 @@ import MonsterGameOfficial from '@/components/secondPart/monsterGameOfficial'
 // Third Part - Understanding Vue Instance
 import ThirdPart from '@/components/thirdPart/list'
 import VueInstance from '@/components/thirdPart/vueInstance'
+// forth Part - Components Introduction
+import FourthPart from '@/components/fourthPart/list'
+import ComponentsIntroduction from '@/components/fourthPart/componentsIntroduction'
 
 Vue.use(Router)
 
@@ -93,6 +96,14 @@ export default new Router({
     {
       path: '/thirdPart/VueInstance',
       component: VueInstance
+    },
+    {
+      path: '/fourthPart',
+      component: FourthPart
+    },
+    {
+      path: '/fourthPart/componentsIntroduction',
+      component: ComponentsIntroduction
     }
   ]
 })
