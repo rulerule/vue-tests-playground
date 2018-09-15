@@ -23,6 +23,8 @@ import VueInstance from '@/components/thirdPart/vueInstance'
 // forth Part - Components Introduction
 import FourthPart from '@/components/fourthPart/list'
 import ComponentsIntroduction from '@/components/fourthPart/componentsIntroduction'
+import Exercise6 from '@/components/fourthPart/exercise6'
+import Exercise6Solution from '@/components/fourthPart/exercise6Solution'
 
 Vue.use(Router)
 
@@ -104,6 +106,14 @@ export default new Router({
     {
       path: '/fourthPart/componentsIntroduction',
       component: ComponentsIntroduction
+    },
+    {
+      path: '/fourthPart/exercise6',
+      component: Exercise6
+    },
+    {
+      path: '/fourthPart/exercise6Solution',
+      component: Exercise6Solution
     }
   ]
 })
