@@ -26,5 +26,6 @@ module.exports = {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import 'src/styles/scss/buttons.scss';
 </style>
