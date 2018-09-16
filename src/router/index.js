@@ -25,6 +25,10 @@ import FourthPart from '@/components/fourthPart/list'
 import ComponentsIntroduction from '@/components/fourthPart/componentsIntroduction'
 import Exercise6 from '@/components/fourthPart/exercise6'
 import Exercise6Solution from '@/components/fourthPart/exercise6Solution'
+// fifth Part - Components Communication
+import FifthPart from '@/components/fifthPart/list'
+import ComponentsCommunication from '@/components/fifthPart/componentsCommunication'
+import Exercise7 from '@/components/fifthPart/exercise7'
 
 Vue.use(Router)
 
@@ -114,6 +118,18 @@ export default new Router({
     {
       path: '/fourthPart/exercise6Solution',
       component: Exercise6Solution
+    },
+    {
+      path: '/fifthPart',
+      component: FifthPart
+    },
+    {
+      path: '/fifthPart/componentsCommunication',
+      component: ComponentsCommunication
+    },
+    {
+      path: '/fifthPart/exercise7',
+      component: Exercise7
     }
   ]
 })

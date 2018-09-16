@@ -5,6 +5,7 @@
     <button class="button-navigation" @click="part2()"> Conditionals </button>
     <button class="button-navigation" @click="part3()"> Understanding Vue Instance </button>
     <button class="button-navigation" @click="part4()"> Components Introduction </button>
+    <button class="button-navigation" @click="part5()"> Components Communication </button>
   </div>
 </template>
 
@@ -25,6 +26,9 @@ module.exports = {
     },
     part4 () {
       this.$router.push('fourthPart/')
+    },
+    part5 () {
+      this.$router.push('fifthPart/')
     }
   }
 }

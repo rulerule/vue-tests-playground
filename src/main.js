@@ -5,6 +5,13 @@ import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
+export const eventBus = new Vue({
+  methods: {
+    changeAge (age) {
+      this.$emit('ageWasEdited', age)
+    }
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({
