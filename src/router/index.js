@@ -32,6 +32,7 @@ import Exercise7 from '@/components/fifthPart/exercise7'
 // sixth Part - Advanced Components
 import SixthPart from '@/components/sixthPart/list'
 import AdvancedComponents from '@/components/sixthPart/advancedComponents'
+import Exercise8 from '@/components/sixthPart/exercise8'
 
 Vue.use(Router)
 
@@ -141,6 +142,10 @@ export default new Router({
     {
       path: '/sixthPart/advancedComponents',
       component: AdvancedComponents
+    },
+    {
+      path: '/sixthPart/exercise8',
+      component: Exercise8
     }
   ]
 })
