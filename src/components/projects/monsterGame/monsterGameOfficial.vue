@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
+import GoBack from '../../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -137,6 +137,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../styles/foundation.min.css";
-@import "../../styles/app.css";
+@import "../../../styles/foundation.min.css";
+@import "../../../styles/app.css";
 </style>

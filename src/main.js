@@ -13,6 +13,9 @@ export const eventBus = new Vue({
   }
 })
 
+export const quoteBus = new Vue({
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

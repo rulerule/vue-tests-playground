@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import ListComponent from '@/components/listComponent'
+// Projects
+import MonsterGame from '@/components/projects/monsterGame/monsterGame'
+import MonsterGameOfficial from '@/components/projects/monsterGame/monsterGameOfficial'
+import WonderfulQuotes from '@/components/projects/wonderfulQuotes/wonderfulQuotes'
+import WonderfulQuotesOfficial from '@/components/projects/wonderfulQuotesOfficial'
 // First Part - Basic Dom Manipulation
 import FirstPart from '@/components/firstPart/list'
 import BasicComponent from '@/components/firstPart/basicComponent'
@@ -15,8 +20,6 @@ import Exercise4 from '@/components/firstPart/exercise4'
 import SecondPart from '@/components/secondPart/list'
 import Conditionals from '@/components/secondPart/conditionals'
 import Exercise5 from '@/components/secondPart/exercise5'
-import MonsterGame from '@/components/secondPart/monsterGame'
-import MonsterGameOfficial from '@/components/secondPart/monsterGameOfficial'
 // Third Part - Understanding Vue Instance
 import ThirdPart from '@/components/thirdPart/list'
 import VueInstance from '@/components/thirdPart/vueInstance'
@@ -41,6 +44,22 @@ export default new Router({
     {
       path: '/',
       component: ListComponent
+    },
+    {
+      path: '/monsterGame',
+      component: MonsterGame
+    },
+    {
+      path: '/MonsterGameOfficial',
+      component: MonsterGameOfficial
+    },
+    {
+      path: '/wonderfulQuotes',
+      component: WonderfulQuotes
+    },
+    {
+      path: '/wonderfulQuotesOfficial',
+      component: WonderfulQuotesOfficial
     },
     {
       path: '/firstPart',
@@ -90,14 +109,6 @@ export default new Router({
     {
       path: '/secondPart/exercise5',
       component: Exercise5
-    },
-    {
-      path: '/secondPart/monsterGame',
-      component: MonsterGame
-    },
-    {
-      path: '/secondPart/MonsterGameOfficial',
-      component: MonsterGameOfficial
     },
     {
       path: '/thirdPart',
