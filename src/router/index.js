@@ -5,7 +5,7 @@ import ListComponent from '@/components/listComponent'
 import MonsterGame from '@/components/projects/monsterGame/monsterGame'
 import MonsterGameOfficial from '@/components/projects/monsterGame/monsterGameOfficial'
 import WonderfulQuotes from '@/components/projects/wonderfulQuotes/wonderfulQuotes'
-import WonderfulQuotesOfficial from '@/components/projects/wonderfulQuotesOfficial'
+import WonderfulQuotesOfficial from '@/components/projects/wonderfulQuotesOfficial/wonderfulQuotesOfficial'
 // First Part - Basic Dom Manipulation
 import FirstPart from '@/components/firstPart/list'
 import BasicComponent from '@/components/firstPart/basicComponent'
