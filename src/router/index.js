@@ -36,6 +36,10 @@ import Exercise7 from '@/components/fifthPart/exercise7'
 import SixthPart from '@/components/sixthPart/list'
 import AdvancedComponents from '@/components/sixthPart/advancedComponents'
 import Exercise8 from '@/components/sixthPart/exercise8'
+// seven Part - Forms
+import SevenPart from '@/components/sevenPart/list'
+import Forms from '@/components/sevenPart/forms'
+import Exercise9 from '@/components/sevenPart/exercise9'
 
 Vue.use(Router)
 
@@ -157,6 +161,18 @@ export default new Router({
     {
       path: '/sixthPart/exercise8',
       component: Exercise8
+    },
+    {
+      path: '/sevenPart',
+      component: SevenPart
+    },
+    {
+      path: '/sevenPart/forms',
+      component: Forms
+    },
+    {
+      path: '/sevenPart/exercise9',
+      component: Exercise9
     }
   ]
 })

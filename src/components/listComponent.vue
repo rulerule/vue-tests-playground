@@ -8,6 +8,7 @@
       <button class="button-navigation" @click="part4()"> Components Introduction </button>
       <button class="button-navigation" @click="part5()"> Components Communication </button>
       <button class="button-navigation" @click="part6()"> Advanced Components </button>
+      <button class="button-navigation" @click="part7()"> Forms </button>
     </div>
     <hr>
     <div class="courses-wrapper">
@@ -55,6 +56,9 @@ module.exports = {
     },
     part6 () {
       this.$router.push('sixthPart/')
+    },
+    part7 () {
+      this.$router.push('sevenPart/')
     }
   }
 }
