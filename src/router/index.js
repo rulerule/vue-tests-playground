@@ -40,6 +40,9 @@ import Exercise8 from '@/components/sixthPart/exercise8'
 import SevenPart from '@/components/sevenPart/list'
 import Forms from '@/components/sevenPart/forms'
 import Exercise9 from '@/components/sevenPart/exercise9'
+// eight Part - Directives
+import EightPart from '@/components/eightPart/list'
+import Directives from '@/components/eightPart/directives'
 
 Vue.use(Router)
 
@@ -173,6 +176,14 @@ export default new Router({
     {
       path: '/sevenPart/exercise9',
       component: Exercise9
+    },
+    {
+      path: '/eightPart',
+      component: EightPart
+    },
+    {
+      path: '/eightPart/directives',
+      component: Directives
     }
   ]
 })
