@@ -44,6 +44,10 @@ import Exercise9 from '@/components/sevenPart/exercise9'
 import EightPart from '@/components/eightPart/list'
 import Directives from '@/components/eightPart/directives'
 import Exercise10 from '@/components/eightPart/exercise10'
+// nine Part - Filters and Mixins
+import NinePart from '@/components/ninePart/list'
+import Filters from '@/components/ninePart/filters'
+import Mixins from '@/components/ninePart/mixins'
 
 Vue.use(Router)
 
@@ -189,6 +193,18 @@ export default new Router({
     {
       path: '/eightPart/exercise10',
       component: Exercise10
+    },
+    {
+      path: '/ninePart',
+      component: NinePart
+    },
+    {
+      path: '/ninePart/filters',
+      component: Filters
+    },
+    {
+      path: '/ninePart/mixins',
+      component: Mixins
     }
   ]
 })
