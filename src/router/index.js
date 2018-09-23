@@ -43,6 +43,7 @@ import Exercise9 from '@/components/sevenPart/exercise9'
 // eight Part - Directives
 import EightPart from '@/components/eightPart/list'
 import Directives from '@/components/eightPart/directives'
+import Exercise10 from '@/components/eightPart/exercise10'
 
 Vue.use(Router)
 
@@ -184,6 +185,10 @@ export default new Router({
     {
       path: '/eightPart/directives',
       component: Directives
+    },
+    {
+      path: '/eightPart/exercise10',
+      component: Exercise10
     }
   ]
 })
