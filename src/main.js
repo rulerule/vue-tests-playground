@@ -13,6 +13,10 @@ export const eventBus = new Vue({
   }
 })
 
+Vue.filter('to-lowercase', function (value) {
+  return value.toLowerCase()
+})
+
 export const quoteBus = new Vue({
 })
 

@@ -48,6 +48,10 @@ import Exercise10 from '@/components/eightPart/exercise10'
 import NinePart from '@/components/ninePart/list'
 import Filters from '@/components/ninePart/filters'
 import Mixins from '@/components/ninePart/mixins'
+import Exercise11 from '@/components/ninePart/exercise11'
+// ten Part - Animations
+import TenPart from '@/components/tenPart/list'
+import Animations from '@/components/tenpart/animations'
 
 Vue.use(Router)
 
@@ -205,6 +209,18 @@ export default new Router({
     {
       path: '/ninePart/mixins',
       component: Mixins
+    },
+    {
+      path: '/ninePart/exercise11',
+      component: Exercise11
+    },
+    {
+      path: '/tenPart',
+      component: TenPart
+    },
+    {
+      path: '/tenPart/animations',
+      component: Animations
     }
   ]
 })
