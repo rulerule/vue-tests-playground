@@ -3,6 +3,7 @@
     <h1> Part 10 - Animations </h1>
     <button class="button-navigation" @click="animations()">Animations</button>
     <button class="button-navigation start" @click="backToList()"> Back To List </button>
+    <button class="button-navigation exercise" @click="exercise12()">Exercise 12 </button>
   </div>
 </template>
 
@@ -17,6 +18,9 @@ module.exports = {
     },
     backToList () {
       this.$router.push('/')
+    },
+    exercise12 () {
+      this.$router.push('exercise12')
     }
   }
 }

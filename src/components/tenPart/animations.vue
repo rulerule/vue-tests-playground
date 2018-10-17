@@ -46,25 +46,59 @@
       :css="false">
       <div v-if="load" style="width: 300px; height:100px; background-color:green;"></div>
     </transition>
+    <div class="space-random"></div>
+    <h1> Animated Components </h1>
+    <button class="btn btn-primary" @click="swapComponent()">switch</button>
+    <transition name="fade" mode="out-in">
+      <component :is="selectedComponent"></component>
+    </transition>
+    <hr>
+    <h1> Transition Groups </h1>
+    <button class="btn btn-primary" @click="addItem">Add Item </button>
+    <ul class="list-group">
+      <transition-group name="slide" mode="out-in">
+        <li v-for="(number, index) in numbers" :key=number class="list-group-item" @click="removeItem(index)">{{number}}</li>
+      </transition-group>
+    </ul>
   <GoBack></GoBack>
 </div>
 </template>
 
 <script>
 import GoBack from '../general/goBackComponent.vue'
+import DangerAlert from './dangerAlert.vue'
+import SuccessAlert from './successAlert.vue'
 export default {
   data () {
     return {
       show: false,
       alertAnimation: 'fade',
       load: true,
-      elementWidth: 100
+      elementWidth: 100,
+      selectedComponent: SuccessAlert,
+      numbers: [1, 2, 3, 4, 5]
     }
   },
   components: {
-    GoBack
+    GoBack,
+    DangerAlert,
+    SuccessAlert
   },
   methods: {
+    addItem () {
+      const pos = Math.floor(Math.random() * this.numbers.length)
+      this.numbers.splice(pos, 0, this.numbers.length + 1)
+    },
+    removeItem (index) {
+      this.numbers.splice(index, 1)
+    },
+    swapComponent () {
+      if (this.selectedComponent === SuccessAlert) {
+        this.selectedComponent = DangerAlert
+      } else {
+        this.selectedComponent = SuccessAlert
+      }
+    },
     beforeEnter (el) {
       console.log('before enter')
       this.elementWidth = 100
@@ -116,6 +150,10 @@ export default {
 </script>
 
 <style lang="scss">
+.space-random {
+  height:50px;
+  width:100%;
+}
   .fade-enter {
     opacity:0;
   }
@@ -145,6 +183,11 @@ export default {
     animation: slide-out 1s ease-out forwards;
     transition:opacity 1s;
     opacity:0;
+    position:absolute;
+  }
+
+  .slide-move {
+    transition:transform 1s;
   }
 
   @keyframes slide-in {

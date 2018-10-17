@@ -52,6 +52,7 @@ import Exercise11 from '@/components/ninePart/exercise11'
 // ten Part - Animations
 import TenPart from '@/components/tenPart/list'
 import Animations from '@/components/tenpart/animations'
+import Exercise12 from '@/components/tenPart/exercise12'
 
 Vue.use(Router)
 
@@ -221,6 +222,10 @@ export default new Router({
     {
       path: '/tenPart/animations',
       component: Animations
+    },
+    {
+      path: '/tenPart/exercise12',
+      component: Exercise12
     }
   ]
 })
