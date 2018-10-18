@@ -20,6 +20,7 @@
       <button class="button-navigation exercise" @click="monsterGameOfficial()"> Monster Game Official </button>
       <button class="button-navigation exercise" @click="wonderfulQuotes()"> Wonderful Quotes </button>
       <button class="button-navigation exercise" @click="wonderfulQuotesOfficial()"> Wonderful Quotes Official </button>
+      <button class="button-navigation exercise" @click="animatedMonsterGame()"> Animated Monster Game </button>
     </div>
   </div>
 </template>
@@ -41,6 +42,9 @@ module.exports = {
     },
     wonderfulQuotesOfficial () {
       this.$router.push('wonderfulQuotesOfficial')
+    },
+    animatedMonsterGame () {
+      this.$router.push('animatedMonsterGame')
     },
     part1 () {
       this.$router.push('firstPart/')

@@ -6,6 +6,7 @@ import MonsterGame from '@/components/projects/monsterGame/monsterGame'
 import MonsterGameOfficial from '@/components/projects/monsterGame/monsterGameOfficial'
 import WonderfulQuotes from '@/components/projects/wonderfulQuotes/wonderfulQuotes'
 import WonderfulQuotesOfficial from '@/components/projects/wonderfulQuotesOfficial/wonderfulQuotesOfficial'
+import AnimatedMonsterGame from '@/components/projects/animatedMonsterGame/animatedMonsterGame'
 // First Part - Basic Dom Manipulation
 import FirstPart from '@/components/firstPart/list'
 import BasicComponent from '@/components/firstPart/basicComponent'
@@ -77,6 +78,10 @@ export default new Router({
     {
       path: '/wonderfulQuotesOfficial',
       component: WonderfulQuotesOfficial
+    },
+    {
+      path: '/animatedMonsterGame',
+      component: AnimatedMonsterGame
     },
     {
       path: '/firstPart',
