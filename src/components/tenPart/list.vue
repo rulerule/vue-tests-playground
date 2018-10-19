@@ -1,5 +1,5 @@
 <template>
-  <div class="seven-part">
+  <div class="ten-part">
     <h1> Part 10 - Animations </h1>
     <button class="button-navigation" @click="animations()">Animations</button>
     <button class="button-navigation start" @click="backToList()"> Back To List </button>
