@@ -2,6 +2,9 @@
 <div class="connecting-to-server container">
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+      <h1> SERVER SETUP </h1>
+      <p> firebase: https://console.firebase.google.com/ </p>
+      <p> server name: vue-course-aux </p>
       <h1> POST TEST </h1>
       <div class="form-group">
         <label>Username</label>
