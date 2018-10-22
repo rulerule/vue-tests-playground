@@ -6,6 +6,10 @@ import router from './router'
 import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
+Vue.http.options.root = 'https://vue-course-aux.firebaseio.com/'
+Vue.http.interceptors.push((request, next) => {
+  console.log(request)
+})
 
 Vue.config.productionTip = false
 export const eventBus = new Vue({

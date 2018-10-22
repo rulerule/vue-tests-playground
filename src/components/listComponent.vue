@@ -13,6 +13,7 @@
       <button class="button-navigation" @click="part9()"> Filters and Mixins </button>
       <button class="button-navigation" @click="part10()"> Animations </button>
       <button class="button-navigation" @click="part11()"> Connecting To Server </button>
+      <button class="button-navigation" @click="part12()"> Routing </button>
     </div>
     <hr>
     <div class="courses-wrapper">
@@ -79,6 +80,9 @@ module.exports = {
     },
     part11 () {
       this.$router.push('elevenPart/')
+    },
+    part12 () {
+      this.$router.push('twelvePart/')
     }
   }
 }

@@ -57,6 +57,9 @@ import Exercise12 from '@/components/tenPart/exercise12'
 // eleven Part - Connecting to server
 import ElevenPart from '@/components/elevenPart/list'
 import ConnectingToServer from '@/components/elevenPart/connectingToServer'
+// twelve Part - Routing
+import TwelvePart from '@/components/twelvePart/list'
+import Routing from '@/components/twelvePart/routing'
 
 Vue.use(Router)
 
@@ -242,6 +245,14 @@ export default new Router({
     {
       path: '/elevenPart/connectingToServer',
       component: ConnectingToServer
+    },
+    {
+      path: '/twelvePart',
+      component: TwelvePart
+    },
+    {
+      path: '/twelvePart/routing',
+      component: Routing
     }
   ]
 })
