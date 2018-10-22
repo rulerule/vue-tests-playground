@@ -60,199 +60,63 @@ import ConnectingToServer from '@/components/elevenPart/connectingToServer'
 // twelve Part - Routing
 import TwelvePart from '@/components/twelvePart/list'
 import Routing from '@/components/twelvePart/routing'
+// thirteen Part - Vuex
+import ThirteenPart from '@/components/thirteenPart/list'
+import Vuex from '@/components/thirteenPart/vuex'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      component: ListComponent
-    },
-    {
-      path: '/monsterGame',
-      component: MonsterGame
-    },
-    {
-      path: '/MonsterGameOfficial',
-      component: MonsterGameOfficial
-    },
-    {
-      path: '/wonderfulQuotes',
-      component: WonderfulQuotes
-    },
-    {
-      path: '/wonderfulQuotesOfficial',
-      component: WonderfulQuotesOfficial
-    },
-    {
-      path: '/animatedMonsterGame',
-      component: AnimatedMonsterGame
-    },
-    {
-      path: '/firstPart',
-      component: FirstPart
-    },
-    {
-      path: '/firstPart/basic',
-      component: BasicComponent
-    },
-    {
-      path: '/firstPart/events',
-      name: 'secondComponent',
-      component: EventsComponent
-    },
-    {
-      path: '/firstPart/twoWayDatabind',
-      component: TwoWayDatabindComponent
-    },
-    {
-      path: '/firstPart/cssIntro',
-      component: CSSIntroComponent
-    },
-    {
-      path: '/firstPart/exercise1',
-      component: Exercise1
-    },
-    {
-      path: '/firstPart/exercise2',
-      component: Exercise2
-    },
-    {
-      path: '/firstPart/exercise3',
-      component: Exercise3
-    },
-    {
-      path: '/firstPart/exercise4',
-      component: Exercise4
-    },
-    {
-      path: '/secondPart',
-      component: SecondPart
-    },
-    {
-      path: '/secondPart/conditionals',
-      component: Conditionals
-    },
-    {
-      path: '/secondPart/exercise5',
-      component: Exercise5
-    },
-    {
-      path: '/thirdPart',
-      component: ThirdPart
-    },
-    {
-      path: '/thirdPart/VueInstance',
-      component: VueInstance
-    },
-    {
-      path: '/fourthPart',
-      component: FourthPart
-    },
-    {
-      path: '/fourthPart/componentsIntroduction',
-      component: ComponentsIntroduction
-    },
-    {
-      path: '/fourthPart/exercise6',
-      component: Exercise6
-    },
-    {
-      path: '/fourthPart/exercise6Solution',
-      component: Exercise6Solution
-    },
-    {
-      path: '/fifthPart',
-      component: FifthPart
-    },
-    {
-      path: '/fifthPart/componentsCommunication',
-      component: ComponentsCommunication
-    },
-    {
-      path: '/fifthPart/exercise7',
-      component: Exercise7
-    },
-    {
-      path: '/sixthPart',
-      component: SixthPart
-    },
-    {
-      path: '/sixthPart/advancedComponents',
-      component: AdvancedComponents
-    },
-    {
-      path: '/sixthPart/exercise8',
-      component: Exercise8
-    },
-    {
-      path: '/sevenPart',
-      component: SevenPart
-    },
-    {
-      path: '/sevenPart/forms',
-      component: Forms
-    },
-    {
-      path: '/sevenPart/exercise9',
-      component: Exercise9
-    },
-    {
-      path: '/eightPart',
-      component: EightPart
-    },
-    {
-      path: '/eightPart/directives',
-      component: Directives
-    },
-    {
-      path: '/eightPart/exercise10',
-      component: Exercise10
-    },
-    {
-      path: '/ninePart',
-      component: NinePart
-    },
-    {
-      path: '/ninePart/filters',
-      component: Filters
-    },
-    {
-      path: '/ninePart/mixins',
-      component: Mixins
-    },
-    {
-      path: '/ninePart/exercise11',
-      component: Exercise11
-    },
-    {
-      path: '/tenPart',
-      component: TenPart
-    },
-    {
-      path: '/tenPart/animations',
-      component: Animations
-    },
-    {
-      path: '/tenPart/exercise12',
-      component: Exercise12
-    },
-    {
-      path: '/elevenPart',
-      component: ElevenPart
-    },
-    {
-      path: '/elevenPart/connectingToServer',
-      component: ConnectingToServer
-    },
-    {
-      path: '/twelvePart',
-      component: TwelvePart
-    },
-    {
-      path: '/twelvePart/routing',
-      component: Routing
-    }
+    { path: '/', component: ListComponent },
+    { path: '/monsterGame', component: MonsterGame },
+    { path: '/MonsterGameOfficial', component: MonsterGameOfficial },
+    { path: '/wonderfulQuotes', component: WonderfulQuotes },
+    { path: '/wonderfulQuotesOfficial', component: WonderfulQuotesOfficial },
+    { path: '/animatedMonsterGame', component: AnimatedMonsterGame },
+    { path: '/firstPart', component: FirstPart },
+    { path: '/firstPart/basic', component: BasicComponent },
+    { path: '/firstPart/events', name: 'secondComponent', component: EventsComponent },
+    { path: '/firstPart/twoWayDatabind', component: TwoWayDatabindComponent },
+    { path: '/firstPart/cssIntro', component: CSSIntroComponent },
+    { path: '/firstPart/exercise1', component: Exercise1 },
+    { path: '/firstPart/exercise2', component: Exercise2 },
+    { path: '/firstPart/exercise3', component: Exercise3 },
+    { path: '/firstPart/exercise4', component: Exercise4 },
+    { path: '/secondPart', component: SecondPart },
+    { path: '/secondPart/conditionals', component: Conditionals },
+    { path: '/secondPart/exercise5', component: Exercise5 },
+    { path: '/thirdPart', component: ThirdPart },
+    { path: '/thirdPart/VueInstance', component: VueInstance },
+    { path: '/fourthPart', component: FourthPart },
+    { path: '/fourthPart/componentsIntroduction', component: ComponentsIntroduction },
+    { path: '/fourthPart/exercise6', component: Exercise6 },
+    { path: '/fourthPart/exercise6Solution', component: Exercise6Solution },
+    { path: '/fifthPart', component: FifthPart },
+    { path: '/fifthPart/componentsCommunication', component: ComponentsCommunication },
+    { path: '/fifthPart/exercise7', component: Exercise7 },
+    { path: '/sixthPart', component: SixthPart },
+    { path: '/sixthPart/advancedComponents', component: AdvancedComponents },
+    { path: '/sixthPart/exercise8', component: Exercise8 },
+    { path: '/sevenPart', component: SevenPart },
+    { path: '/sevenPart/forms', component: Forms },
+    { path: '/sevenPart/exercise9', component: Exercise9 },
+    { path: '/eightPart', component: EightPart },
+    { path: '/eightPart/directives', component: Directives },
+    { path: '/eightPart/exercise10', component: Exercise10 },
+    { path: '/ninePart', component: NinePart },
+    { path: '/ninePart/filters', component: Filters },
+    { path: '/ninePart/mixins', component: Mixins },
+    { path: '/ninePart/exercise11', component: Exercise11 },
+    { path: '/tenPart', component: TenPart },
+    { path: '/tenPart/animations', component: Animations },
+    { path: '/tenPart/exercise12', component: Exercise12 },
+    { path: '/elevenPart', component: ElevenPart },
+    { path: '/elevenPart/connectingToServer', component: ConnectingToServer },
+    { path: '/twelvePart', component: TwelvePart },
+    { path: '/twelvePart/routing', component: Routing, props: {name: 'testerouting'} },
+    { path: '/thirteenPart', component: ThirteenPart },
+    { path: '/thirteenPart/vuex', component: Vuex },
+    { path: '*', redirect: '/' }
   ]
 })

@@ -14,6 +14,7 @@
       <button class="button-navigation" @click="part10()"> Animations </button>
       <button class="button-navigation" @click="part11()"> Connecting To Server </button>
       <button class="button-navigation" @click="part12()"> Routing </button>
+      <button class="button-navigation" @click="part13()"> Vuex </button>
     </div>
     <hr>
     <div class="courses-wrapper">
@@ -34,55 +35,58 @@ module.exports = {
   },
   methods: {
     monsterGame () {
-      this.$router.push('monsterGame')
+      this.$router.push('/monsterGame')
     },
     monsterGameOfficial () {
-      this.$router.push('monsterGameOfficial')
+      this.$router.push('/monsterGameOfficial')
     },
     wonderfulQuotes () {
-      this.$router.push('wonderfulQuotes')
+      this.$router.push('/wonderfulQuotes')
     },
     wonderfulQuotesOfficial () {
-      this.$router.push('wonderfulQuotesOfficial')
+      this.$router.push('/wonderfulQuotesOfficial')
     },
     animatedMonsterGame () {
-      this.$router.push('animatedMonsterGame')
+      this.$router.push('/animatedMonsterGame')
     },
     part1 () {
-      this.$router.push('firstPart/')
+      this.$router.push('/firstPart/')
     },
     part2 () {
-      this.$router.push('secondPart/')
+      this.$router.push('/secondPart/')
     },
     part3 () {
-      this.$router.push('thirdPart/')
+      this.$router.push('/thirdPart/')
     },
     part4 () {
-      this.$router.push('fourthPart/')
+      this.$router.push('/fourthPart/')
     },
     part5 () {
-      this.$router.push('fifthPart/')
+      this.$router.push('/fifthPart/')
     },
     part6 () {
-      this.$router.push('sixthPart/')
+      this.$router.push('/sixthPart/')
     },
     part7 () {
-      this.$router.push('sevenPart/')
+      this.$router.push('/sevenPart/')
     },
     part8 () {
-      this.$router.push('eightPart/')
+      this.$router.push('/eightPart/')
     },
     part9 () {
-      this.$router.push('ninePart/')
+      this.$router.push('/ninePart/')
     },
     part10 () {
-      this.$router.push('tenPart/')
+      this.$router.push('/tenPart/')
     },
     part11 () {
-      this.$router.push('elevenPart/')
+      this.$router.push('/elevenPart/')
     },
     part12 () {
-      this.$router.push('twelvePart/')
+      this.$router.push('/twelvePart/')
+    },
+    part13 () {
+      this.$router.push('/thirteenPart/')
     }
   }
 }

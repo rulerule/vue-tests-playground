@@ -1,7 +1,5 @@
 <template>
-<div class="routing">
-  <p> This class was used to build the routing of the application, so i took no additional info</p>
-  <p>from router: {{ name }} </p>
+<div class="vuex">
   <GoBack></GoBack>
 </div>
 </template>
@@ -9,12 +7,6 @@
 <script>
 import GoBack from '../general/goBackComponent.vue'
 export default {
-  props: {
-    name: {
-      type: String,
-      default: 'Vue!'
-    }
-  },
   data () {
     return {
     }
