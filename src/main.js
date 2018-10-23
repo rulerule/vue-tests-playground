@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
 
+import { store } from './store/store'
+
 Vue.use(VueResource)
 Vue.http.options.root = 'https://vue-course-aux.firebaseio.com/'
 Vue.http.interceptors.push((request, next) => {
@@ -65,6 +67,7 @@ Vue.directive('highlight', {
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
