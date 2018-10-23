@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <ListComponent></ListComponent> -->
+    <ListComponent></ListComponent>
     <router-view></router-view>
   </div>
 </template>

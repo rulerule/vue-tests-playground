@@ -1,122 +1,137 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import ListComponent from '@/components/listComponent'
+import Welcome from '@/components/welcome'
+
+// First Part - Basic Dom Manipulation
+import BasicComponent from '@/components/firstPart/basicComponent'
+import EventsComponent from '@/components/firstPart/eventsComponent'
+import TwoWayDatabindComponent from '@/components/firstPart/twoWayDatabindComponent'
+import CSSIntroComponent from '@/components/firstPart/cssIntroComponent'
+// Second Part - Conditionals
+import Conditionals from '@/components/secondPart/conditionals'
+// Third Part - Understanding Vue Instance
+import VueInstance from '@/components/thirdPart/vueInstance'
+// forth Part - Components Introduction
+import ComponentsIntroduction from '@/components/fourthPart/componentsIntroduction'
+// fifth Part - Components Communication
+import ComponentsCommunication from '@/components/fifthPart/componentsCommunication'
+// sixth Part - Advanced Components
+import AdvancedComponents from '@/components/sixthPart/advancedComponents'
+// seven Part - Forms
+import Forms from '@/components/sevenPart/forms'
+// eight Part - Directives
+import Directives from '@/components/eightPart/directives'
+// nine Part - Filters and Mixins
+import Filters from '@/components/ninePart/filters'
+import Mixins from '@/components/ninePart/mixins'
+// ten Part - Animations
+import Animations from '@/components/tenpart/animations'
+// eleven Part - Connecting to server
+import ConnectingToServer from '@/components/elevenPart/connectingToServer'
+// twelve Part - Routing
+import Routing from '@/components/twelvePart/routing'
+// thirteen Part - Vuex
+import Vuex from '@/components/thirteenPart/vuex'
+
+// Bases
+import FirstPart from '@/components/firstPart/base'
+import SecondPart from '@/components/secondPart/base'
+import ThirdPart from '@/components/thirdPart/base'
+import FourthPart from '@/components/fourthPart/base'
+import FifthPart from '@/components/fifthPart/base'
+import SixthPart from '@/components/sixthPart/base'
+import SevenPart from '@/components/sevenPart/base'
+import EightPart from '@/components/eightPart/base'
+import NinePart from '@/components/ninePart/base'
+import TenPart from '@/components/tenPart/base'
+import ElevenPart from '@/components/elevenPart/base'
+import TwelvePart from '@/components/twelvePart/base'
+import ThirteenPart from '@/components/thirteenPart/base'
+
+// Exercises
+import Exercise1 from '@/components/exercises/exercise1'
+import Exercise2 from '@/components/exercises/exercise2'
+import Exercise3 from '@/components/exercises/exercise3'
+import Exercise4 from '@/components/exercises/exercise4'
+import Exercise5 from '@/components/exercises/exercise5'
+import Exercise6 from '@/components/exercises/exercise6'
+import Exercise6Solution from '@/components/exercises/exercise6Solution'
+import Exercise7 from '@/components/exercises/exercise7'
+import Exercise8 from '@/components/exercises/exercise8'
+import Exercise9 from '@/components/exercises/exercise9'
+import Exercise10 from '@/components/exercises/exercise10'
+import Exercise11 from '@/components/exercises/exercise11'
+import Exercise12 from '@/components/exercises/exercise12'
+
 // Projects
 import MonsterGame from '@/components/projects/monsterGame/monsterGame'
 import MonsterGameOfficial from '@/components/projects/monsterGame/monsterGameOfficial'
 import WonderfulQuotes from '@/components/projects/wonderfulQuotes/wonderfulQuotes'
 import WonderfulQuotesOfficial from '@/components/projects/wonderfulQuotesOfficial/wonderfulQuotesOfficial'
 import AnimatedMonsterGame from '@/components/projects/animatedMonsterGame/animatedMonsterGame'
-// First Part - Basic Dom Manipulation
-import FirstPart from '@/components/firstPart/list'
-import BasicComponent from '@/components/firstPart/basicComponent'
-import EventsComponent from '@/components/firstPart/eventsComponent'
-import TwoWayDatabindComponent from '@/components/firstPart/twoWayDatabindComponent'
-import CSSIntroComponent from '@/components/firstPart/cssIntroComponent'
-import Exercise1 from '@/components/firstPart/exercise1'
-import Exercise2 from '@/components/firstPart/exercise2'
-import Exercise3 from '@/components/firstPart/exercise3'
-import Exercise4 from '@/components/firstPart/exercise4'
-// Second Part - Conditionals
-import SecondPart from '@/components/secondPart/list'
-import Conditionals from '@/components/secondPart/conditionals'
-import Exercise5 from '@/components/secondPart/exercise5'
-// Third Part - Understanding Vue Instance
-import ThirdPart from '@/components/thirdPart/list'
-import VueInstance from '@/components/thirdPart/vueInstance'
-// forth Part - Components Introduction
-import FourthPart from '@/components/fourthPart/list'
-import ComponentsIntroduction from '@/components/fourthPart/componentsIntroduction'
-import Exercise6 from '@/components/fourthPart/exercise6'
-import Exercise6Solution from '@/components/fourthPart/exercise6Solution'
-// fifth Part - Components Communication
-import FifthPart from '@/components/fifthPart/list'
-import ComponentsCommunication from '@/components/fifthPart/componentsCommunication'
-import Exercise7 from '@/components/fifthPart/exercise7'
-// sixth Part - Advanced Components
-import SixthPart from '@/components/sixthPart/list'
-import AdvancedComponents from '@/components/sixthPart/advancedComponents'
-import Exercise8 from '@/components/sixthPart/exercise8'
-// seven Part - Forms
-import SevenPart from '@/components/sevenPart/list'
-import Forms from '@/components/sevenPart/forms'
-import Exercise9 from '@/components/sevenPart/exercise9'
-// eight Part - Directives
-import EightPart from '@/components/eightPart/list'
-import Directives from '@/components/eightPart/directives'
-import Exercise10 from '@/components/eightPart/exercise10'
-// nine Part - Filters and Mixins
-import NinePart from '@/components/ninePart/list'
-import Filters from '@/components/ninePart/filters'
-import Mixins from '@/components/ninePart/mixins'
-import Exercise11 from '@/components/ninePart/exercise11'
-// ten Part - Animations
-import TenPart from '@/components/tenPart/list'
-import Animations from '@/components/tenpart/animations'
-import Exercise12 from '@/components/tenPart/exercise12'
-// eleven Part - Connecting to server
-import ElevenPart from '@/components/elevenPart/list'
-import ConnectingToServer from '@/components/elevenPart/connectingToServer'
-// twelve Part - Routing
-import TwelvePart from '@/components/twelvePart/list'
-import Routing from '@/components/twelvePart/routing'
-// thirteen Part - Vuex
-import ThirteenPart from '@/components/thirteenPart/list'
-import Vuex from '@/components/thirteenPart/vuex'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/', component: ListComponent },
-    { path: '/monsterGame', component: MonsterGame },
-    { path: '/MonsterGameOfficial', component: MonsterGameOfficial },
-    { path: '/wonderfulQuotes', component: WonderfulQuotes },
-    { path: '/wonderfulQuotesOfficial', component: WonderfulQuotesOfficial },
-    { path: '/animatedMonsterGame', component: AnimatedMonsterGame },
-    { path: '/firstPart', component: FirstPart },
+    { path: '/', component: Welcome },
+    // Lessons
+    { path: '/firstPart',
+      component: FirstPart,
+      children: [
+        { path: 'basic', component: BasicComponent }
+      ]
+    },
     { path: '/firstPart/basic', component: BasicComponent },
     { path: '/firstPart/events', name: 'secondComponent', component: EventsComponent },
     { path: '/firstPart/twoWayDatabind', component: TwoWayDatabindComponent },
     { path: '/firstPart/cssIntro', component: CSSIntroComponent },
-    { path: '/firstPart/exercise1', component: Exercise1 },
-    { path: '/firstPart/exercise2', component: Exercise2 },
-    { path: '/firstPart/exercise3', component: Exercise3 },
-    { path: '/firstPart/exercise4', component: Exercise4 },
     { path: '/secondPart', component: SecondPart },
     { path: '/secondPart/conditionals', component: Conditionals },
-    { path: '/secondPart/exercise5', component: Exercise5 },
     { path: '/thirdPart', component: ThirdPart },
     { path: '/thirdPart/VueInstance', component: VueInstance },
     { path: '/fourthPart', component: FourthPart },
     { path: '/fourthPart/componentsIntroduction', component: ComponentsIntroduction },
-    { path: '/fourthPart/exercise6', component: Exercise6 },
-    { path: '/fourthPart/exercise6Solution', component: Exercise6Solution },
+    { path: '/exercise6Solution', component: Exercise6Solution },
     { path: '/fifthPart', component: FifthPart },
     { path: '/fifthPart/componentsCommunication', component: ComponentsCommunication },
-    { path: '/fifthPart/exercise7', component: Exercise7 },
     { path: '/sixthPart', component: SixthPart },
     { path: '/sixthPart/advancedComponents', component: AdvancedComponents },
-    { path: '/sixthPart/exercise8', component: Exercise8 },
     { path: '/sevenPart', component: SevenPart },
     { path: '/sevenPart/forms', component: Forms },
-    { path: '/sevenPart/exercise9', component: Exercise9 },
     { path: '/eightPart', component: EightPart },
     { path: '/eightPart/directives', component: Directives },
-    { path: '/eightPart/exercise10', component: Exercise10 },
     { path: '/ninePart', component: NinePart },
     { path: '/ninePart/filters', component: Filters },
     { path: '/ninePart/mixins', component: Mixins },
-    { path: '/ninePart/exercise11', component: Exercise11 },
     { path: '/tenPart', component: TenPart },
     { path: '/tenPart/animations', component: Animations },
-    { path: '/tenPart/exercise12', component: Exercise12 },
     { path: '/elevenPart', component: ElevenPart },
     { path: '/elevenPart/connectingToServer', component: ConnectingToServer },
     { path: '/twelvePart', component: TwelvePart },
     { path: '/twelvePart/routing', component: Routing, props: {name: 'testerouting'} },
     { path: '/thirteenPart', component: ThirteenPart },
     { path: '/thirteenPart/vuex', component: Vuex },
+    // Exercises
+    { path: '/exercise1', component: Exercise1 },
+    { path: '/exercise2', component: Exercise2 },
+    { path: '/exercise3', component: Exercise3 },
+    { path: '/exercise4', component: Exercise4 },
+    { path: '/exercise5', component: Exercise5 },
+    { path: '/exercise6', component: Exercise6 },
+    { path: '/exercise7', component: Exercise7 },
+    { path: '/exercise8', component: Exercise8 },
+    { path: '/exercise9', component: Exercise9 },
+    { path: '/exercise10', component: Exercise10 },
+    { path: '/exercise11', component: Exercise11 },
+    { path: '/exercise12', component: Exercise12 },
+    // Projects
+    { path: '/monsterGame', component: MonsterGame },
+    { path: '/MonsterGameOfficial', component: MonsterGameOfficial },
+    { path: '/wonderfulQuotes', component: WonderfulQuotes },
+    { path: '/wonderfulQuotesOfficial', component: WonderfulQuotesOfficial },
+    { path: '/animatedMonsterGame', component: AnimatedMonsterGame },
+    // Redirect
     { path: '*', redirect: '/' }
   ]
 })

@@ -1,103 +1,77 @@
 <template>
-  <div class="base-course">
-    <div class="lectures-wrapper">
-      <h1> List Of Lectures </h1>
-      <button class="button-navigation" @click="part1()"> Basic Dom Manipulation </button>
-      <button class="button-navigation" @click="part2()"> Conditionals </button>
-      <button class="button-navigation" @click="part3()"> Understanding Vue Instance </button>
-      <button class="button-navigation" @click="part4()"> Components Introduction </button>
-      <button class="button-navigation" @click="part5()"> Components Communication </button>
-      <button class="button-navigation" @click="part6()"> Advanced Components </button>
-      <button class="button-navigation" @click="part7()"> Forms </button>
-      <button class="button-navigation" @click="part8()"> Directives </button>
-      <button class="button-navigation" @click="part9()"> Filters and Mixins </button>
-      <button class="button-navigation" @click="part10()"> Animations </button>
-      <button class="button-navigation" @click="part11()"> Connecting To Server </button>
-      <button class="button-navigation" @click="part12()"> Routing </button>
-      <button class="button-navigation" @click="part13()"> Vuex </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <router-link class="navbar-brand" tag="a" to="/">Home</router-link>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Introduction </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <router-link class="dropdown-item" tag="a" to="/firstPart/">Dom Manipulation</router-link>
+            <router-link class="dropdown-item" tag="a" to="/secondPart/">Conditionals</router-link>
+            <router-link class="dropdown-item" tag="a" to="/thirdPart/">Vue Instance</router-link>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Components </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <router-link class="dropdown-item" tag="a" to="/fourthPart/">Introduction</router-link>
+            <router-link class="dropdown-item" tag="a" to="/fifthPart/">Communication</router-link>
+            <router-link class="dropdown-item" tag="a" to="/sixthPart/">Advanced</router-link>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Intermediate Concepts </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <router-link class="dropdown-item" tag="a" to="/sevenPart/">Forms</router-link>
+            <router-link class="dropdown-item" tag="a" to="/eightPart/">Directives</router-link>
+            <router-link class="dropdown-item" tag="a" to="/ninePart/">Filters and Mixins</router-link>
+            <router-link class="dropdown-item" tag="a" to="/tenPart/">Animations</router-link>
+          </div>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" tag="a" to="/elevenPart/">Server Communication</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" tag="a" to="/twelvePart/">Routing</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" tag="a" to="/thirteenPart/">State Management</router-link>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Projects </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <router-link class="dropdown-item" tag="a" to="/monsterGame">Monster Game</router-link>
+            <router-link class="dropdown-item" tag="a" to="/monsterGameOfficial">Monster Game Official</router-link>
+            <router-link class="dropdown-item" tag="a" to="/wonderfulQuotes">Wonderful Quotes</router-link>
+            <router-link class="dropdown-item" tag="a" to="/wonderfulQuotesOfficial">Wonderful Quotes Official</router-link>
+            <router-link class="dropdown-item" tag="a" to="/animatedMonsterGame">Animated Monster Game</router-link>
+            <router-link class="dropdown-item" tag="a" to="/">To Be Added</router-link>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Exercises </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <router-link class="dropdown-item" tag="a" to="/firstPart/exercise1">Exercise 1</router-link>
+            <router-link class="dropdown-item" tag="a" to="/firstPart/exercise2">Exercise 2</router-link>
+            <router-link class="dropdown-item" tag="a" to="/firstPart/exercise3">Exercise 3</router-link>
+            <router-link class="dropdown-item" tag="a" to="/firstPart/exercise4">Exercise 4</router-link>
+            <router-link class="dropdown-item" tag="a" to="/secondPart/exercise5">Exercise 5</router-link>
+            <router-link class="dropdown-item" tag="a" to="/fourthPart/exercise6">Exercise 6</router-link>
+            <router-link class="dropdown-item" tag="a" to="/fifthPart/exercise7">Exercise 7</router-link>
+            <router-link class="dropdown-item" tag="a" to="/sixthPart/exercise8">Exercise 8</router-link>
+            <router-link class="dropdown-item" tag="a" to="/sevenPart/exercise9">Exercise 9</router-link>
+            <router-link class="dropdown-item" tag="a" to="/eightPart/exercise10">Exercise 10</router-link>
+            <router-link class="dropdown-item" tag="a" to="/ninePart/exercise11">Exercise 11</router-link>
+            <router-link class="dropdown-item" tag="a" to="/tenPart/exercise12">Exercise 12</router-link>
+          </div>
+        </li>
+      </ul>
     </div>
-    <hr>
-    <div class="courses-wrapper">
-      <h1> Course Projects </h1>
-      <button class="button-navigation exercise" @click="monsterGame()"> Monster Game by Myself </button>
-      <button class="button-navigation exercise" @click="monsterGameOfficial()"> Monster Game Official </button>
-      <button class="button-navigation exercise" @click="wonderfulQuotes()"> Wonderful Quotes </button>
-      <button class="button-navigation exercise" @click="wonderfulQuotesOfficial()"> Wonderful Quotes Official </button>
-      <button class="button-navigation exercise" @click="animatedMonsterGame()"> Animated Monster Game </button>
-    </div>
-  </div>
+  </nav>
 </template>
 
 <script>
-module.exports = {
-  data () {
-    return {}
-  },
-  methods: {
-    monsterGame () {
-      this.$router.push('/monsterGame')
-    },
-    monsterGameOfficial () {
-      this.$router.push('/monsterGameOfficial')
-    },
-    wonderfulQuotes () {
-      this.$router.push('/wonderfulQuotes')
-    },
-    wonderfulQuotesOfficial () {
-      this.$router.push('/wonderfulQuotesOfficial')
-    },
-    animatedMonsterGame () {
-      this.$router.push('/animatedMonsterGame')
-    },
-    part1 () {
-      this.$router.push('/firstPart/')
-    },
-    part2 () {
-      this.$router.push('/secondPart/')
-    },
-    part3 () {
-      this.$router.push('/thirdPart/')
-    },
-    part4 () {
-      this.$router.push('/fourthPart/')
-    },
-    part5 () {
-      this.$router.push('/fifthPart/')
-    },
-    part6 () {
-      this.$router.push('/sixthPart/')
-    },
-    part7 () {
-      this.$router.push('/sevenPart/')
-    },
-    part8 () {
-      this.$router.push('/eightPart/')
-    },
-    part9 () {
-      this.$router.push('/ninePart/')
-    },
-    part10 () {
-      this.$router.push('/tenPart/')
-    },
-    part11 () {
-      this.$router.push('/elevenPart/')
-    },
-    part12 () {
-      this.$router.push('/twelvePart/')
-    },
-    part13 () {
-      this.$router.push('/thirteenPart/')
-    }
-  }
-}
 </script>
+
 <style lang="scss">
-@import 'src/styles/scss/buttons.scss';
-div {
-  width:100%;
-  float:left;
-  &.courses-wrapper {
-    margin-top:20px;
-  }
-}
 </style>

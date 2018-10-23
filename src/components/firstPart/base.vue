@@ -10,6 +10,7 @@
     <button class="button-navigation exercise" @click="exercise(3)"> Exercise 3 </button>
     <button class="button-navigation exercise" @click="exercise(4)"> Exercise 4 </button>
     <button class="button-navigation start" @click="backToList()"> Back To List </button>
+    <router-view></router-view>
   </div>
 </template>
 
