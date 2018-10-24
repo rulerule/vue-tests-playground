@@ -15,12 +15,10 @@
           </div>
       </div>
     </div>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 import Answer from './answer.vue'
 import Question from './question.vue'
 export default {
@@ -30,7 +28,6 @@ export default {
     }
   },
   components: {
-    GoBack,
     Answer,
     Question
   },

@@ -10,12 +10,10 @@
     <p> NOTE: the destroy method doesnt remove the code from the dom, just the vue instance itself. </p>
     <button @click="title = 'changed'"> update title to test update </button>
     <button @click="destroy()"> DESTROY </button>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -24,9 +22,6 @@ export default {
       imageToDisplay: '../../../static/vue_lifecycle.png',
       informationParagraphColor: 'blue'
     }
-  },
-  components: {
-    GoBack
   },
   methods: {
     show () {

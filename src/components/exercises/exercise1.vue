@@ -14,12 +14,10 @@
         <div>
             <input v-bind:value="name" type="text">
         </div>
-        <GoBack></GoBack>
     </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   name: 'Exercise1',
   data () {
@@ -28,9 +26,6 @@ export default {
       age: '90',
       imgToDisplay: 'https://i.imgur.com/zygpOzL.gif'
     }
-  },
-  components: {
-    GoBack
   },
   methods: {
     multiplyAge: function () {

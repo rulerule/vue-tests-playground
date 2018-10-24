@@ -7,12 +7,10 @@
     <button @click="secondCounter++">Increase Second Counter</button>
     <p> Counter: {{ counter }} | {{ secondCounter}} </p>
     <p> Result: {{ result() }} | {{ output }} </p>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -20,9 +18,6 @@ export default {
       counter: 0,
       secondCounter: 0
     }
-  },
-  components: {
-    GoBack
   },
   computed: { // ONLY WORK FOR SYNC TASKS
     output () {

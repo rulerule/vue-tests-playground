@@ -27,12 +27,10 @@
       </ul>
     </div>
   </div>
-  <GoBack></GoBack>
 </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -44,9 +42,6 @@ export default {
       resource: {},
       node: 'data'
     }
-  },
-  components: {
-    GoBack
   },
   methods: {
     submit () {

@@ -5,12 +5,10 @@
     <quote-display></quote-display>
     <quote-footer></quote-footer>
     <hr>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../../general/goBackComponent.vue'
 import QuoteAdder from './quoteAdder.vue'
 import QuoteDisplay from './quoteDisplay.vue'
 import QuotesCounter from './quotesCounter.vue'
@@ -21,7 +19,6 @@ export default {
     return {}
   },
   components: {
-    GoBack,
     'quote-adder': QuoteAdder,
     'quote-display': QuoteDisplay,
     'quotes-counter': QuotesCounter,

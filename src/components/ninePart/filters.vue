@@ -6,12 +6,10 @@
   <ul>
     <li v-for="fruit in filteredFruits" :key="fruit">{{fruit}}</li>
   </ul>
-  <GoBack></GoBack>
 </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -19,9 +17,6 @@ export default {
       fruits: ['Apple', 'Banana', 'Mango', 'Melon'],
       filterText: ''
     }
-  },
-  components: {
-    GoBack
   },
   filters: {
     'to-uppercase' (value) {

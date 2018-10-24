@@ -25,12 +25,10 @@
         <div v-else> {{ element }} </div>
       </li>
     </ul>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -47,9 +45,6 @@ export default {
         data: [1.67, 1.33, 0.98, 2.21]
       }
     }
-  },
-  components: {
-    GoBack
   },
   methods: {
     checkArray (element) {

@@ -14,12 +14,10 @@
             <input v-on:keydown.enter="storeValue" type="text">
             <p> {{ value }}</p>
         </div>
-        <GoBack></GoBack>
     </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   name: 'Exercise2',
   data () {
@@ -27,9 +25,6 @@ export default {
       value: 0,
       textToAlert: 'badjorasDiModem'
     }
-  },
-  components: {
-    GoBack
   },
   methods: {
     alertMe: function (text) {

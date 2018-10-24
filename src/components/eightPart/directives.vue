@@ -6,12 +6,10 @@
   <p v-local-highlight:background.delayed="'red'"> Color this </p>
   <p v-highlight:background="'red'"> Color this </p>
   <p v-highlight="'red'"> Color this </p>
-  <GoBack></GoBack>
 </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   directives: {
     'local-highlight': {
@@ -34,9 +32,6 @@ export default {
   },
   data () {
     return {}
-  },
-  components: {
-    GoBack
   }
 }
 </script>

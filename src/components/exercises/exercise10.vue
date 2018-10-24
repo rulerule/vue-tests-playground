@@ -3,18 +3,13 @@
     <button v-customOn:click="clicked" class="btn btn-primary"> Click Me </button>
     <hr>
     <div v-customOn:mouseenter="mouseEnter" v-customOn:mouseleave="mouseLeave" style="width:100px; height:100px; background-color:pink"></div>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {}
-  },
-  components: {
-    GoBack
   },
   directives: {
     customOn: {

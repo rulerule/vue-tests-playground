@@ -1,31 +1,17 @@
 <template>
-  <div class="second-part">
-    <h1> Part 2 - Conditionals </h1>
-    <button class="button-navigation" @click="conditionals()"> Conditionals And Loops </button>
-    <button class="button-navigation exercise" @click="exercise(5)"> Exercise 5 </button>
-    <button class="button-navigation start" @click="backToList()"> Back To List </button>
+  <div class="outside-container">
+    <div class="side-menu">
+      <div class="title"> Conditionals </div>
+      <router-link class="lesson" to="conditionals" tag="button" exact>intro</router-link>
+    </div>
+    <router-view class="side-content"></router-view>
   </div>
 </template>
 
 <script>
-module.exports = {
-  data () {
-    return {}
-  },
-  methods: {
-    conditionals () {
-      this.$router.push('conditionals')
-    },
-    backToList () {
-      this.$router.push('/')
-    },
-    exercise (number) {
-      this.$router.push(`exercise${number}`)
-    }
+export default {
+  created () {
+    this.$router.push('conditionals')
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@import 'src/styles/scss/buttons.scss';
-</style>

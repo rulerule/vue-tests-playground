@@ -1,35 +1,18 @@
 <template>
-  <div class="seven-part">
-    <h1> Part 9 - Filters and Mixins </h1>
-    <button class="button-navigation" @click="filters()">Filters</button>
-    <button class="button-navigation" @click="mixins()">Mixins</button>
-    <button class="button-navigation exercise" @click="exercise11()">Exercise 11 </button>
-    <button class="button-navigation start" @click="backToList()"> Back To List </button>
+  <div class="first-part outside-container">
+    <div class="side-menu">
+      <div class="title"> Filters and Mixins </div>
+      <router-link class="lesson" to="filters" tag="button" exact>filters</router-link>
+      <router-link class="lesson" to="mixins" tag="button" exact>mixins</router-link>
+    </div>
+    <router-view class="side-content"></router-view>
   </div>
 </template>
 
 <script>
-module.exports = {
-  data () {
-    return {}
-  },
-  methods: {
-    filters () {
-      this.$router.push('filters')
-    },
-    mixins () {
-      this.$router.push('mixins')
-    },
-    exercise11 () {
-      this.$router.push('exercise11')
-    },
-    backToList () {
-      this.$router.push('/')
-    }
+export default {
+  created () {
+    this.$router.push('filters')
   }
 }
 </script>
-
-<style lang="scss">
-@import 'src/styles/scss/buttons.scss';
-</style>

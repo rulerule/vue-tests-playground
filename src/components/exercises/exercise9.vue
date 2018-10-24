@@ -46,13 +46,11 @@
                 </div>
             </div>
         </div>
-        <GoBack></GoBack>
     </div>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 import FullName from './fullName.vue'
 export default {
   data () {
@@ -65,7 +63,6 @@ export default {
     }
   },
   components: {
-    GoBack,
     FullName
   },
   methods: {

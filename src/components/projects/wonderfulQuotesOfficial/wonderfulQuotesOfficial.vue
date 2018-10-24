@@ -8,12 +8,10 @@
         <div class="alert alert-info">Info: Click on quote to delete it </div>
       </div>
     </div>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../../general/goBackComponent.vue'
 import QuoteGrid from './quoteGrid.vue'
 import NewQuote from './newQuote.vue'
 import Header from './header.vue'
@@ -27,7 +25,6 @@ export default {
     }
   },
   components: {
-    GoBack,
     appQuoteGrid: QuoteGrid,
     newQuote: NewQuote,
     appHeader: Header

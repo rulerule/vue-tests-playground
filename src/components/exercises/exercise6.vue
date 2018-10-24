@@ -29,7 +29,6 @@
         <footer>
           <p>All Servers are managed here</p>
         </footer>
-        <goBack></goBack>
       </div>
     </div>
   </div>
@@ -37,14 +36,12 @@
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 import Exercise6Aux from './exercise6AuxComponent.vue'
 export default {
   data () {
     return {}
   },
   components: {
-    GoBack,
     Exercise6Aux
   }
 }

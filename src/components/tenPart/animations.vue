@@ -60,12 +60,10 @@
         <li v-for="(number, index) in numbers" :key=number class="list-group-item" @click="removeItem(index)">{{number}}</li>
       </transition-group>
     </ul>
-  <GoBack></GoBack>
 </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 import DangerAlert from './dangerAlert.vue'
 import SuccessAlert from './successAlert.vue'
 export default {
@@ -80,7 +78,6 @@ export default {
     }
   },
   components: {
-    GoBack,
     DangerAlert,
     SuccessAlert
   },

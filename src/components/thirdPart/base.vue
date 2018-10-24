@@ -1,27 +1,17 @@
 <template>
-  <div class="third-part">
-    <h1> Part 3 - Understanding Vue Instance </h1>
-    <button class="button-navigation" @click="vueInstance()"> Vue Instance </button>
-    <button class="button-navigation start" @click="backToList()"> Back To List </button>
+  <div class="first-part outside-container">
+    <div class="side-menu">
+      <div class="title"> Vue instance </div>
+      <router-link class="lesson" to="vueInstance" tag="button" exact>concepts</router-link>
+    </div>
+    <router-view class="side-content"></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {}
-  },
-  methods: {
-    vueInstance () {
-      this.$router.push('vueInstance')
-    },
-    backToList () {
-      this.$router.push('/')
-    }
+  created () {
+    this.$router.push('vueInstance')
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@import 'src/styles/scss/buttons.scss';
-</style>

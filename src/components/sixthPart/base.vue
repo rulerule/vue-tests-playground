@@ -1,31 +1,17 @@
 <template>
-  <div class="fifth-part">
-    <h1> Part 6 - Advanced Components </h1>
-    <button class="button-navigation" @click="advancedComponents()">Advanced Components </button>
-    <button class="button-navigation exercise" @click="exercise8()"> Exercise 8 </button>
-    <button class="button-navigation start" @click="backToList()"> Back To List </button>
+  <div class="first-part outside-container">
+    <div class="side-menu">
+      <div class="title"> Advanced Components </div>
+      <router-link class="lesson" to="advancedComponents" tag="button" exact>advanced components</router-link>
+    </div>
+    <router-view class="side-content"></router-view>
   </div>
 </template>
 
 <script>
-module.exports = {
-  data () {
-    return {}
-  },
-  methods: {
-    advancedComponents () {
-      this.$router.push('advancedComponents')
-    },
-    exercise8 () {
-      this.$router.push('exercise8')
-    },
-    backToList () {
-      this.$router.push('/')
-    }
+export default {
+  created () {
+    this.$router.push('advancedComponents')
   }
 }
 </script>
-
-<style lang="scss">
-@import 'src/styles/scss/buttons.scss';
-</style>

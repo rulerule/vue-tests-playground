@@ -2,12 +2,10 @@
 <div class="routing">
   <p> This class was used to build the routing of the application, so i took no additional info</p>
   <p>from router: {{ name }} </p>
-  <GoBack></GoBack>
 </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   props: {
     name: {
@@ -18,9 +16,6 @@ export default {
   data () {
     return {
     }
-  },
-  components: {
-    GoBack
   }
 }
 </script>

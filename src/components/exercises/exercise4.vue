@@ -31,12 +31,10 @@
             <div :style="{width:progressWidth + 'px'}" :class="{progress: progressActive}"></div>
         </div>
       </div>
-    <GoBack></GoBack>
     </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   name: 'Exercise4',
   data () {
@@ -52,9 +50,6 @@ export default {
       progressActive: false,
       progressWidth: 0
     }
-  },
-  components: {
-    GoBack
   },
   methods: {
     startEffect: function () {

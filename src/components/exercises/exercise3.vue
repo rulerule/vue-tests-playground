@@ -13,12 +13,10 @@
             <div>reset time has been set to: {{ timer }} ms </div>
             <p>{{ value }}</p>
         </div>
-        <GoBack></GoBack>
     </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   name: 'Exercise3',
   data () {
@@ -26,9 +24,6 @@ export default {
       value: 0,
       timer: 0
     }
-  },
-  components: {
-    GoBack
   },
   computed: {
     result: function () {

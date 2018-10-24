@@ -90,12 +90,10 @@
             </div>
         </div>
     </div>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 import Switch from './switch.vue'
 export default {
   data () {
@@ -115,7 +113,6 @@ export default {
     }
   },
   components: {
-    GoBack,
     'appSwitch': Switch
   },
   methods: {

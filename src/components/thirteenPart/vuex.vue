@@ -21,12 +21,10 @@
       </div>
     </div>
   </div>
-  <GoBack></GoBack>
 </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 import Counter from './Counter.vue'
 import AnotherCounter from './anotherCounter.vue'
 import YetAnotherCounter from './yetAnotherCounter.vue'
@@ -39,7 +37,6 @@ export default {
     }
   },
   components: {
-    GoBack,
     appCounter: Counter,
     appResult: Result,
     appAnotherCounter: AnotherCounter,

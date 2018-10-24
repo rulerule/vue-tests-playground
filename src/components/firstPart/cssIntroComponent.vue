@@ -16,12 +16,10 @@
     <input type="text" v-model="color2">
     <input type="text" v-model="width">
     <hr>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -30,9 +28,6 @@ export default {
       color2: 'gray',
       width: 100
     }
-  },
-  components: {
-    GoBack
   },
   computed: {
     divClasses () {

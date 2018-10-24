@@ -34,12 +34,10 @@
       <h1> Keep track of information when using v-for </h1>
       <button @click="ingredients.push('spices')">Add New</button>
     </div>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -51,9 +49,6 @@ export default {
         {name: 'anna', age: 'unkown', color: 'blue'}
       ]
     }
-  },
-  components: {
-    GoBack
   }
 }
 </script>

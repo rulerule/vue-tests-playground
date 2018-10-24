@@ -1,27 +1,17 @@
 <template>
-  <div class="twelve-part">
-    <h1> Part 13 - Vuex </h1>
-    <button class="button-navigation" @click="vuex()">Vuex</button>
-    <button class="button-navigation start" @click="backToList()"> Back To List </button>
+  <div class="first-part outside-container">
+    <div class="side-menu">
+      <div class="title"> State Management </div>
+      <router-link class="lesson" to="vuex" tag="button" exact>vuex</router-link>
+    </div>
+    <router-view class="side-content"></router-view>
   </div>
 </template>
 
 <script>
-module.exports = {
-  data () {
-    return {}
-  },
-  methods: {
-    vuex () {
-      this.$router.push('vuex')
-    },
-    backToList () {
-      this.$router.push('/')
-    }
+export default {
+  created () {
+    this.$router.push('vuex')
   }
 }
 </script>
-
-<style lang="scss">
-@import 'src/styles/scss/buttons.scss';
-</style>

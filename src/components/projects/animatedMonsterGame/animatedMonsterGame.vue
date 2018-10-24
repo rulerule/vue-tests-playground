@@ -52,12 +52,10 @@
             </div>
         </section>
     </transition>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -67,9 +65,6 @@ export default {
       turns: [],
       currentTurn: 0
     }
-  },
-  components: {
-    GoBack
   },
   methods: {
     startGame: function () {

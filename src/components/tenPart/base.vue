@@ -1,31 +1,17 @@
 <template>
-  <div class="ten-part">
-    <h1> Part 10 - Animations </h1>
-    <button class="button-navigation" @click="animations()">Animations</button>
-    <button class="button-navigation start" @click="backToList()"> Back To List </button>
-    <button class="button-navigation exercise" @click="exercise12()">Exercise 12 </button>
+  <div class="first-part outside-container">
+    <div class="side-menu">
+      <div class="title"> Animations </div>
+      <router-link class="lesson" to="animations" tag="button" exact>animations</router-link>
+    </div>
+    <router-view class="side-content"></router-view>
   </div>
 </template>
 
 <script>
-module.exports = {
-  data () {
-    return {}
-  },
-  methods: {
-    animations () {
-      this.$router.push('animations')
-    },
-    backToList () {
-      this.$router.push('/')
-    },
-    exercise12 () {
-      this.$router.push('exercise12')
-    }
+export default {
+  created () {
+    this.$router.push('animations')
   }
 }
 </script>
-
-<style lang="scss">
-@import 'src/styles/scss/buttons.scss';
-</style>

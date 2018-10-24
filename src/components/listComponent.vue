@@ -51,27 +51,21 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Exercises </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <router-link class="dropdown-item" tag="a" to="/firstPart/exercise1">Exercise 1</router-link>
-            <router-link class="dropdown-item" tag="a" to="/firstPart/exercise2">Exercise 2</router-link>
-            <router-link class="dropdown-item" tag="a" to="/firstPart/exercise3">Exercise 3</router-link>
-            <router-link class="dropdown-item" tag="a" to="/firstPart/exercise4">Exercise 4</router-link>
-            <router-link class="dropdown-item" tag="a" to="/secondPart/exercise5">Exercise 5</router-link>
-            <router-link class="dropdown-item" tag="a" to="/fourthPart/exercise6">Exercise 6</router-link>
-            <router-link class="dropdown-item" tag="a" to="/fifthPart/exercise7">Exercise 7</router-link>
-            <router-link class="dropdown-item" tag="a" to="/sixthPart/exercise8">Exercise 8</router-link>
-            <router-link class="dropdown-item" tag="a" to="/sevenPart/exercise9">Exercise 9</router-link>
-            <router-link class="dropdown-item" tag="a" to="/eightPart/exercise10">Exercise 10</router-link>
-            <router-link class="dropdown-item" tag="a" to="/ninePart/exercise11">Exercise 11</router-link>
-            <router-link class="dropdown-item" tag="a" to="/tenPart/exercise12">Exercise 12</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise1">Exercise 1</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise2">Exercise 2</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise3">Exercise 3</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise4">Exercise 4</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise5">Exercise 5</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise6">Exercise 6</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise7">Exercise 7</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise8">Exercise 8</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise9">Exercise 9</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise10">Exercise 10</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise11">Exercise 11</router-link>
+            <router-link class="dropdown-item" tag="a" to="/exercise12">Exercise 12</router-link>
           </div>
         </li>
       </ul>
     </div>
   </nav>
 </template>
-
-<script>
-</script>
-
-<style lang="scss">
-</style>

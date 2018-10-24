@@ -11,12 +11,10 @@
             </div>
         </div>
     </div>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 import { exercise11Mixin } from './exercise11mixin'
 export default {
   mixins: [exercise11Mixin],
@@ -25,9 +23,6 @@ export default {
       text: 'text to be reversed',
       text2: 'text to be counted'
     }
-  },
-  components: {
-    GoBack
   },
   filters: {
     'reverse-text' (value) {

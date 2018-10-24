@@ -1,27 +1,17 @@
 <template>
-  <div class="twelve-part">
-    <h1> Part 12 - Routing </h1>
-    <button class="button-navigation" @click="routing()">Routing</button>
-    <button class="button-navigation start" @click="backToList()"> Back To List </button>
+  <div class="first-part outside-container">
+    <div class="side-menu">
+      <div class="title"> Routing </div>
+      <router-link class="lesson" to="routing" tag="button" exact>vue-router</router-link>
+    </div>
+    <router-view class="side-content"></router-view>
   </div>
 </template>
 
 <script>
-module.exports = {
-  data () {
-    return {}
-  },
-  methods: {
-    routing () {
-      this.$router.push('routing')
-    },
-    backToList () {
-      this.$router.push('/')
-    }
+export default {
+  created () {
+    this.$router.push('routing')
   }
 }
 </script>
-
-<style lang="scss">
-@import 'src/styles/scss/buttons.scss';
-</style>

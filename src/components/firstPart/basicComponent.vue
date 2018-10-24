@@ -3,12 +3,10 @@
     <h1> {{firstWord}} </h1>
     <p v-html="finishedLink"></p>
     <div class="first"> {{firstWord}} {{getSecondWord()}} - <a v-bind:href="hrefElement">google</a></div>
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -22,9 +20,6 @@ export default {
     getSecondWord () {
       return this.firstWord
     }
-  },
-  components: {
-    GoBack
   }
 }
 </script>

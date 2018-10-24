@@ -8,12 +8,10 @@
       <span v-on:mousemove.stop="">DEAD SPOT</span>
     </p>
     <input type="text" v-on:keyup.enter="alertMe">
-    <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 export default {
   data () {
     return {
@@ -21,9 +19,6 @@ export default {
       x: 0,
       y: 0
     }
-  },
-  components: {
-    GoBack
   },
   methods: {
     increase: function (amount, event) {

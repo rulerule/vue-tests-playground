@@ -55,7 +55,6 @@ import Exercise3 from '@/components/exercises/exercise3'
 import Exercise4 from '@/components/exercises/exercise4'
 import Exercise5 from '@/components/exercises/exercise5'
 import Exercise6 from '@/components/exercises/exercise6'
-import Exercise6Solution from '@/components/exercises/exercise6Solution'
 import Exercise7 from '@/components/exercises/exercise7'
 import Exercise8 from '@/components/exercises/exercise8'
 import Exercise9 from '@/components/exercises/exercise9'
@@ -79,39 +78,85 @@ export default new Router({
     { path: '/firstPart',
       component: FirstPart,
       children: [
-        { path: 'basic', component: BasicComponent }
+        { path: 'basic', component: BasicComponent },
+        { path: 'events', name: 'secondComponent', component: EventsComponent },
+        { path: 'twoWayDatabind', component: TwoWayDatabindComponent },
+        { path: 'cssIntro', component: CSSIntroComponent }
       ]
     },
-    { path: '/firstPart/basic', component: BasicComponent },
-    { path: '/firstPart/events', name: 'secondComponent', component: EventsComponent },
-    { path: '/firstPart/twoWayDatabind', component: TwoWayDatabindComponent },
-    { path: '/firstPart/cssIntro', component: CSSIntroComponent },
-    { path: '/secondPart', component: SecondPart },
-    { path: '/secondPart/conditionals', component: Conditionals },
-    { path: '/thirdPart', component: ThirdPart },
-    { path: '/thirdPart/VueInstance', component: VueInstance },
-    { path: '/fourthPart', component: FourthPart },
-    { path: '/fourthPart/componentsIntroduction', component: ComponentsIntroduction },
-    { path: '/exercise6Solution', component: Exercise6Solution },
-    { path: '/fifthPart', component: FifthPart },
-    { path: '/fifthPart/componentsCommunication', component: ComponentsCommunication },
-    { path: '/sixthPart', component: SixthPart },
-    { path: '/sixthPart/advancedComponents', component: AdvancedComponents },
-    { path: '/sevenPart', component: SevenPart },
-    { path: '/sevenPart/forms', component: Forms },
-    { path: '/eightPart', component: EightPart },
-    { path: '/eightPart/directives', component: Directives },
-    { path: '/ninePart', component: NinePart },
-    { path: '/ninePart/filters', component: Filters },
-    { path: '/ninePart/mixins', component: Mixins },
-    { path: '/tenPart', component: TenPart },
-    { path: '/tenPart/animations', component: Animations },
-    { path: '/elevenPart', component: ElevenPart },
-    { path: '/elevenPart/connectingToServer', component: ConnectingToServer },
-    { path: '/twelvePart', component: TwelvePart },
-    { path: '/twelvePart/routing', component: Routing, props: {name: 'testerouting'} },
-    { path: '/thirteenPart', component: ThirteenPart },
-    { path: '/thirteenPart/vuex', component: Vuex },
+    { path: '/secondPart',
+      component: SecondPart,
+      children: [
+        { path: 'conditionals', component: Conditionals }
+      ]
+    },
+    { path: '/thirdPart',
+      component: ThirdPart,
+      children: [
+        { path: 'VueInstance', component: VueInstance }
+      ]
+    },
+    { path: '/fourthPart',
+      component: FourthPart,
+      children: [
+        { path: 'componentsIntroduction', component: ComponentsIntroduction }
+      ]
+    },
+    { path: '/fifthPart',
+      component: FifthPart,
+      children: [
+        { path: 'componentsCommunication', component: ComponentsCommunication }
+      ]
+    },
+    { path: '/sixthPart',
+      component: SixthPart,
+      children: [
+        { path: 'advancedComponents', component: AdvancedComponents }
+      ]
+    },
+    { path: '/sevenPart',
+      component: SevenPart,
+      children: [
+        { path: 'forms', component: Forms }
+      ]
+    },
+    { path: '/eightPart',
+      component: EightPart,
+      children: [
+        { path: 'directives', component: Directives }
+      ]
+    },
+    { path: '/ninePart',
+      component: NinePart,
+      children: [
+        { path: 'filters', component: Filters },
+        { path: 'mixins', component: Mixins }
+      ]
+    },
+    { path: '/tenPart',
+      component: TenPart,
+      children: [
+        { path: 'animations', component: Animations }
+      ]
+    },
+    { path: '/elevenPart',
+      component: ElevenPart,
+      children: [
+        { path: 'connectingToServer', component: ConnectingToServer }
+      ]
+    },
+    { path: '/twelvePart',
+      component: TwelvePart,
+      children: [
+        { path: 'routing', component: Routing, props: {name: 'testerouting'} }
+      ]
+    },
+    { path: '/thirteenPart',
+      component: ThirteenPart,
+      children: [
+        { path: 'vuex', component: Vuex }
+      ]
+    },
     // Exercises
     { path: '/exercise1', component: Exercise1 },
     { path: '/exercise2', component: Exercise2 },

@@ -19,7 +19,6 @@
             <p> A wonderful Quote </p>
             <p> Another beautiful quote </p>
           </Quote> -->
-          <GoBack></GoBack>
         </div>
       </div>
     </div>
@@ -27,7 +26,6 @@
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 import Quote from './quote.vue'
 import Author from './author.vue'
 import NewQuote from './newQuote.vue'
@@ -40,7 +38,6 @@ export default {
     }
   },
   components: {
-    GoBack,
     Quote,
     Author,
     NewQuote

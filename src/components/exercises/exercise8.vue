@@ -21,12 +21,10 @@
               </app-red>
           </div>
       </div>
-      <GoBack></GoBack>
   </div>
 </template>
 
 <script>
-import GoBack from '../general/goBackComponent.vue'
 import Blue from './blue.vue'
 import Green from './green.vue'
 import Red from './red.vue'
@@ -37,7 +35,6 @@ export default {
     }
   },
   components: {
-    GoBack,
     appBlue: Blue,
     appGreen: Green,
     appRed: Red
