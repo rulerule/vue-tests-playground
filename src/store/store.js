@@ -8,6 +8,10 @@ import * as actions from './actions'
 import * as mutations from './mutations'
 import * as getters from './getters'
 
+// final project modules
+import stocks from './finalProjectModules/stocks'
+import portfolio from './finalProjectModules/portfolio'
+
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
@@ -18,6 +22,8 @@ export const store = new Vuex.Store({
   mutations,
   actions,
   modules: {
-    counter
+    stocks,
+    counter,
+    portfolio
   }
 })

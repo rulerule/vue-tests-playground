@@ -45,7 +45,7 @@
             <router-link class="dropdown-item" tag="a" to="/wonderfulQuotes">Wonderful Quotes</router-link>
             <router-link class="dropdown-item" tag="a" to="/wonderfulQuotesOfficial">Wonderful Quotes Official</router-link>
             <router-link class="dropdown-item" tag="a" to="/animatedMonsterGame">Animated Monster Game</router-link>
-            <router-link class="dropdown-item" tag="a" to="/">To Be Added</router-link>
+            <router-link class="dropdown-item" tag="a" to="/finalProject/">Final Project</router-link>
           </div>
         </li>
         <li class="nav-item dropdown">

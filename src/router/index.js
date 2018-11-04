@@ -68,6 +68,11 @@ import MonsterGameOfficial from '@/components/projects/monsterGame/monsterGameOf
 import WonderfulQuotes from '@/components/projects/wonderfulQuotes/wonderfulQuotes'
 import WonderfulQuotesOfficial from '@/components/projects/wonderfulQuotesOfficial/wonderfulQuotesOfficial'
 import AnimatedMonsterGame from '@/components/projects/animatedMonsterGame/animatedMonsterGame'
+import FinalProject from '@/components/projects/finalProject/finalProject'
+
+// Final Project aux routes
+import Portfolio from '@/components/projects/finalProject/portfolio/portfolio'
+import Stocks from '@/components/projects/finalProject/stocks/stocks'
 
 Vue.use(Router)
 
@@ -176,6 +181,13 @@ export default new Router({
     { path: '/wonderfulQuotes', component: WonderfulQuotes },
     { path: '/wonderfulQuotesOfficial', component: WonderfulQuotesOfficial },
     { path: '/animatedMonsterGame', component: AnimatedMonsterGame },
+    { path: '/finalProject',
+      component: FinalProject,
+      children: [
+        { path: 'portfolio', component: Portfolio },
+        { path: 'stocks', component: Stocks }
+      ]
+    },
     // Redirect
     { path: '*', redirect: '/' }
   ]
